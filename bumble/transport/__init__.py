@@ -104,6 +104,11 @@ async def open_transport(name):
 
         return await open_android_emulator_transport(spec[0] if spec else None)
 
+    if scheme == 'android-netsim':
+        from .android_netsim import open_android_netsim_transport
+
+        return await open_android_netsim_transport(spec[0] if spec else None)
+
     raise ValueError('unknown transport scheme')
 
 

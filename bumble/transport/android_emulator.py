@@ -16,12 +16,12 @@
 # Imports
 # -----------------------------------------------------------------------------
 import logging
-import grpc
+import grpc.aio
 
 from .common import PumpedTransport, PumpedPacketSource, PumpedPacketSink
-from .emulated_bluetooth_pb2_grpc import EmulatedBluetoothServiceStub
-from .emulated_bluetooth_packets_pb2 import HCIPacket
-from .emulated_bluetooth_vhci_pb2_grpc import VhciForwardingServiceStub
+from .grpc_protobuf.emulated_bluetooth_pb2_grpc import EmulatedBluetoothServiceStub
+from .grpc_protobuf.emulated_bluetooth_packets_pb2 import HCIPacket
+from .grpc_protobuf.emulated_bluetooth_vhci_pb2_grpc import VhciForwardingServiceStub
 
 
 # -----------------------------------------------------------------------------
